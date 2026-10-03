@@ -1,0 +1,27 @@
+{
+  "case_id":"CF-001",
+  "case_status":"OPEN",
+  "classification":"RESTRICTED",
+  "cryptid_name":"BIGFOOT / SASQUATCH",
+  "aliases":["Sasquatch","Wood Ape"],
+  "first_reported":"Various historical accounts",
+  "primary_location":"Pacific Northwest",
+  "physical_description":{
+    "height":"6–9 ft. reported",
+    "weight":"Unknown",
+    "coloration":"Dark brown to black",
+    "eyes":"Variable witness reports",
+    "distinctive_features":"Large upright figure; heavy build; long arms; oversized footprints.",
+    "description":"Witnesses generally describe a large, hair-covered, bipedal figure observed near remote forested terrain."
+  },
+  "behavior":"Reported behavior varies. Many accounts describe brief visual contact followed by withdrawal into wooded terrain.",
+  "habitat":"Remote forests, mountainous areas, and sparsely populated wilderness.",
+  "known_range":"Most frequently associated with the Pacific Northwest, with reports elsewhere in North America.",
+  "evidence":[{"type":"Track / Footprint","date":"","location":"","description":"Record measurements, photographs, and chain of custody here."}],
+  "sightings":[{"date":"","location":"","witness":"","statement":"Enter witness statement here."}],
+  "investigator_notes":"",
+  "assessment":"Insufficient verified evidence for final classification.",
+  "danger_level":"UNKNOWN",
+  "recommendations":"Continue evidence collection. Corroborate witness accounts before escalation.",
+  "attachments":[]
+}
