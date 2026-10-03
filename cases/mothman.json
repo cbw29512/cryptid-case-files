@@ -1,0 +1,27 @@
+{
+  "case_id":"CF-002",
+  "case_status":"OPEN",
+  "classification":"RESTRICTED",
+  "cryptid_name":"MOTHMAN",
+  "aliases":["Winged Humanoid"],
+  "first_reported":"1960s reports",
+  "primary_location":"Point Pleasant, West Virginia",
+  "physical_description":{
+    "height":"Large humanoid figure reported",
+    "weight":"Unknown",
+    "coloration":"Dark",
+    "eyes":"Often described as bright or reflective",
+    "distinctive_features":"Large wings or wing-like silhouette; unusual eye reports.",
+    "description":"Witness descriptions vary considerably. Record only source-specific observations in this file."
+  },
+  "behavior":"",
+  "habitat":"",
+  "known_range":"",
+  "evidence":[],
+  "sightings":[],
+  "investigator_notes":"",
+  "assessment":"",
+  "danger_level":"UNKNOWN",
+  "recommendations":"",
+  "attachments":[]
+}
