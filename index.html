@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Cryptid Case Files</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="toolbar no-print">
+  <div><h1>CRYPTID CASE FILES</h1><small>1950s investigative file generator</small></div>
+  <div class="controls">
+    <select id="caseSelect" aria-label="Select cryptid case"></select>
+    <button id="saveBtn">Save Draft</button>
+    <button id="resetBtn">Reset</button>
+    <button id="printBtn">Print / Save PDF</button>
+  </div>
+</header>
+
+<main class="workspace">
+<article class="case-file">
+  <header class="file-head">
+    <div class="agency">UNITED STATES BUREAU OF UNUSUAL INVESTIGATIONS</div>
+    <div class="division">SPECIAL FIELD INVESTIGATIONS DIVISION</div>
+    <div class="stamp editable" contenteditable="true" data-field="classification"></div>
+    <h2>CASE FILE</h2>
+
+    <div class="grid meta">
+      <label>CASE NO.<span class="editable" contenteditable="true" data-field="case_id"></span></label>
+      <label>STATUS<span class="editable" contenteditable="true" data-field="case_status"></span></label>
+      <label class="full">SUBJECT<span class="editable subject" contenteditable="true" data-field="cryptid_name"></span></label>
+      <label class="full">ALSO KNOWN AS<span class="editable" contenteditable="true" data-field="aliases"></span></label>
+      <label>FIRST REPORTED<span class="editable" contenteditable="true" data-field="first_reported"></span></label>
+      <label>PRIMARY LOCATION<span class="editable" contenteditable="true" data-field="primary_location"></span></label>
+    </div>
+  </header>
+
+  <section>
+    <h3>PHYSICAL DESCRIPTION</h3>
+    <div class="grid">
+      <label>HEIGHT<span class="editable" contenteditable="true" data-field="physical_description.height"></span></label>
+      <label>WEIGHT<span class="editable" contenteditable="true" data-field="physical_description.weight"></span></label>
+      <label>COLORATION<span class="editable" contenteditable="true" data-field="physical_description.coloration"></span></label>
+      <label>EYES<span class="editable" contenteditable="true" data-field="physical_description.eyes"></span></label>
+    </div>
+    <label>DISTINCTIVE FEATURES<div class="typed editable" contenteditable="true" data-field="physical_description.distinctive_features"></div></label>
+    <label>DESCRIPTION<div class="typed editable tall" contenteditable="true" data-field="physical_description.description"></div></label>
+  </section>
+
+  <section>
+    <h3>BEHAVIOR &amp; HABITAT</h3>
+    <label>OBSERVED BEHAVIOR<div class="typed editable tall" contenteditable="true" data-field="behavior"></div></label>
+    <label>HABITAT<div class="typed editable" contenteditable="true" data-field="habitat"></div></label>
+    <label>KNOWN RANGE<div class="typed editable" contenteditable="true" data-field="known_range"></div></label>
+  </section>
+
+  <section>
+    <div class="section-row"><h3>WITNESS STATEMENTS</h3><button id="addSightingBtn" class="no-print">+ Add Statement</button></div>
+    <div id="sightingsList"></div>
+  </section>
+
+  <section>
+    <div class="section-row"><h3>PHYSICAL EVIDENCE</h3><button id="addEvidenceBtn" class="no-print">+ Add Evidence</button></div>
+    <div id="evidenceList"></div>
+  </section>
+
+  <section>
+    <h3>INVESTIGATOR NOTES</h3>
+    <div class="typed editable notes" contenteditable="true" data-field="investigator_notes"></div>
+  </section>
+
+  <section>
+    <h3>ASSESSMENT</h3>
+    <label>THREAT LEVEL<span class="threat editable" contenteditable="true" data-field="danger_level"></span></label>
+    <label>CASE ASSESSMENT<div class="typed editable tall" contenteditable="true" data-field="assessment"></div></label>
+    <label>RECOMMENDATIONS<div class="typed editable tall" contenteditable="true" data-field="recommendations"></div></label>
+  </section>
+
+  <footer>
+    <div class="stamp">CASE REMAINS OPEN</div>
+    <p>PROPERTY OF THE BUREAU OF UNUSUAL INVESTIGATIONS</p>
+  </footer>
+</article>
+</main>
+
+<template id="sightingTemplate">
+  <div class="record sighting-card">
+    <div class="record-head"><b class="record-number">STATEMENT</b><button class="remove no-print">Remove</button></div>
+    <div class="grid record-grid">
+      <label>DATE<span class="editable" contenteditable="true" data-key="date"></span></label>
+      <label>LOCATION<span class="editable" contenteditable="true" data-key="location"></span></label>
+      <label class="full">WITNESS<span class="editable" contenteditable="true" data-key="witness"></span></label>
+    </div>
+    <label>STATEMENT<div class="typed editable tall" contenteditable="true" data-key="statement"></div></label>
+  </div>
+</template>
+
+<template id="evidenceTemplate">
+  <div class="record evidence-card">
+    <div class="record-head"><b class="record-number">EVIDENCE</b><button class="remove no-print">Remove</button></div>
+    <div class="grid record-grid">
+      <label>TYPE<span class="editable" contenteditable="true" data-key="type"></span></label>
+      <label>DATE<span class="editable" contenteditable="true" data-key="date"></span></label>
+      <label class="full">LOCATION<span class="editable" contenteditable="true" data-key="location"></span></label>
+    </div>
+    <label>DESCRIPTION<div class="typed editable tall" contenteditable="true" data-key="description"></div></label>
+  </div>
+</template>
+
+<script src="app.js"></script>
+</body>
+</html>
