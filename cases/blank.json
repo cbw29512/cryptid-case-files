@@ -1,0 +1,20 @@
+{
+  "case_id":"CF-NEW",
+  "case_status":"OPEN",
+  "classification":"UNCLASSIFIED",
+  "cryptid_name":"UNIDENTIFIED SUBJECT",
+  "aliases":[],
+  "first_reported":"",
+  "primary_location":"",
+  "physical_description":{"height":"","weight":"","coloration":"","eyes":"","distinctive_features":"","description":""},
+  "behavior":"",
+  "habitat":"",
+  "known_range":"",
+  "evidence":[],
+  "sightings":[],
+  "investigator_notes":"",
+  "assessment":"",
+  "danger_level":"UNKNOWN",
+  "recommendations":"",
+  "attachments":[]
+}
