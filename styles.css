@@ -46,6 +46,7 @@ button,select{font:inherit}
 }
 .controls button:hover,.section-row button:hover,.remove:hover{background:#f7eddc}
 .workspace{padding:16px 15px 50px;overflow-x:auto}
+.print-only{display:none}
 .case-file{
   position:relative;
   width:8.5in;
@@ -210,13 +211,25 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
 @page{size:Letter;margin:0}
 @media print{
   html,body{width:8.5in;background:#fff}
+  body{font-size:10.5pt;line-height:1.35}
+  .print-only{display:block!important}
+  .print-archive-mark{
+    position:absolute;
+    top:.24in;
+    right:.38in;
+    z-index:3;
+    font-size:7pt;
+    letter-spacing:.14em;
+    color:rgba(126,18,14,.75);
+    transform:rotate(1.5deg);
+  }
   .no-print{display:none!important}
   .workspace{padding:0}
   .case-file{
     width:8.5in;
     min-height:11in;
     margin:0;
-    padding:.48in .57in;
+    padding:.54in .62in .5in;
     box-shadow:none;
     background:
       radial-gradient(circle at 14% 12%,rgba(109,76,42,.06),transparent 22%),
@@ -225,6 +238,152 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
     print-color-adjust:exact;
     -webkit-print-color-adjust:exact;
   }
-  .case-file:before{border-color:rgba(70,50,32,.12)}
-  section,.record,footer{break-inside:avoid}
+  .case-file:before{
+    inset:.17in;
+    border:1px solid rgba(70,50,32,.16);
+  }
+
+  .file-head{
+    padding-bottom:.12in;
+    border-bottom:1px solid rgba(23,18,13,.28);
+    margin-bottom:.12in;
+  }
+
+  .agency{
+    font-size:13pt;
+    letter-spacing:.15em;
+  }
+
+  .division{
+    font-size:7.5pt;
+    margin-top:4px;
+  }
+
+  .hand-note{
+    margin-top:9px;
+    font-size:8pt;
+  }
+
+  .file-head h2{
+    margin:14px 0 12px;
+    font-size:20pt;
+    letter-spacing:.18em;
+  }
+
+  .stamp{
+    margin-top:12px;
+    padding:4px 9px 2px;
+    border-width:2px;
+    font-size:9pt;
+  }
+
+  .meta{
+    gap:7px 16px;
+  }
+
+  .grid span{
+    min-height:20px;
+    padding-top:2px;
+    font-size:9pt;
+  }
+
+  label{
+    margin-top:7px;
+    font-size:7pt;
+  }
+
+  section{
+    margin-top:17px;
+    break-inside:auto;
+  }
+
+  section h3{
+    margin:0 0 7px;
+    padding-bottom:4px;
+    font-size:9pt;
+    break-after:avoid-page;
+    page-break-after:avoid;
+  }
+
+  section > label,
+  .grid,
+  .section-row{
+    break-inside:avoid;
+  }
+
+  .typed{
+    min-height:auto;
+    padding:5px 7px;
+    line-height:18px;
+    font-size:8.8pt;
+    background:
+      repeating-linear-gradient(to bottom,transparent 0,transparent 17px,rgba(23,18,13,.08) 17px,rgba(23,18,13,.08) 18px),
+      rgba(255,255,255,.07);
+  }
+
+  .typed:empty{
+    min-height:28px;
+  }
+
+  .tall{min-height:54px}
+  .notes{min-height:86px}
+
+  .record{
+    padding:9px;
+    margin-top:10px;
+    background:rgba(255,255,255,.11);
+    border:1px solid rgba(23,18,13,.36);
+    break-inside:avoid-page;
+    page-break-inside:avoid;
+  }
+
+  .record:before{
+    top:-7px;
+    font-size:6pt;
+  }
+
+  .record-head{
+    margin-bottom:4px;
+  }
+
+  .record-number{
+    font-size:7.5pt;
+  }
+
+  .record-grid{
+    gap:5px 14px;
+  }
+
+  .threat{
+    min-width:115px;
+    padding:3px 7px;
+    font-size:9pt;
+  }
+
+  footer{
+    margin-top:20px;
+    padding-top:10px;
+    break-inside:avoid-page;
+    page-break-inside:avoid;
+  }
+
+  footer p{
+    margin-top:6px;
+    font-size:6.5pt;
+  }
+
+  .footer-note{
+    font-size:7.5pt;
+  }
+
+  .sighting-card,
+  .evidence-card{
+    orphans:3;
+    widows:3;
+  }
+
+  h3, .record-head, label{
+    orphans:2;
+    widows:2;
+  }
 }
