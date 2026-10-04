@@ -92,9 +92,9 @@ button,select{font:inherit}
 }
 .file-head h2{
   text-align:center;
-  font-family:"Libre Baskerville",Georgia,serif;
-  letter-spacing:.16em;
-  font-size:1.78rem;
+  font-family:"Special Elite","Courier New",monospace;
+  letter-spacing:.12em;
+  font-size:1.9rem;
   margin:20px 0 18px;
 }
 .stamp{
@@ -112,10 +112,10 @@ button,select{font:inherit}
 .full{grid-column:1/-1}
 label{
   display:block;
-  font-family:"Libre Baskerville",Georgia,serif;
+  font-family:"Special Elite","Courier New",monospace;
   font-size:1rem;
   font-weight:700;
-  letter-spacing:.05em;
+  letter-spacing:.04em;
   line-height:1.2;
   margin-top:12px;
 }
@@ -129,8 +129,8 @@ label{
   font-size:1.05rem;
 }
 .subject{
-  font-family:"Libre Baskerville",Georgia,serif;
-  font-size:1.12rem!important;
+  font-family:"Special Elite","Courier New",monospace;
+  font-size:1.18rem!important;
   font-weight:700!important;
 }
 section{margin-top:25px;break-inside:avoid}
@@ -138,9 +138,9 @@ section h3{
   margin:0 0 10px;
   padding-bottom:6px;
   border-bottom:1px solid var(--ink);
-  font-family:"Libre Baskerville",Georgia,serif;
-  font-size:1rem;
-  letter-spacing:.08em;
+  font-family:"Special Elite","Courier New",monospace;
+  font-size:1.05rem;
+  letter-spacing:.06em;
 }
 .typed{
   min-height:58px;
@@ -350,7 +350,7 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
 
   label {
     margin-top: 5px;
-    font-family: "Libre Baskerville", Georgia, serif;
+    font-family: "Special Elite", "Courier New", monospace;
     font-size: 10.5pt;
     line-height: 1.15;
     letter-spacing: .045em;
