@@ -348,8 +348,9 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
 
   label {
     margin-top: 4px;
-    font-size: 8.8pt;
+    font-size: 8.3pt;
     line-height: 1.2;
+    letter-spacing: .045em;
   }
 
   .grid span {
