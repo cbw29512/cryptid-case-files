@@ -113,10 +113,11 @@ button,select{font:inherit}
 label{
   display:block;
   font-family:"Libre Baskerville",Georgia,serif;
-  font-size:.82rem;
+  font-size:1rem;
   font-weight:700;
-  letter-spacing:.055em;
-  margin-top:10px;
+  letter-spacing:.05em;
+  line-height:1.2;
+  margin-top:12px;
 }
 .editable{font-weight:normal;text-transform:none;letter-spacing:normal}
 .grid span{
@@ -125,7 +126,7 @@ label{
   margin-top:4px;
   padding:4px 2px 2px;
   border-bottom:1px solid var(--line);
-  font-size:1rem;
+  font-size:1.05rem;
 }
 .subject{
   font-family:"Libre Baskerville",Georgia,serif;
@@ -138,7 +139,7 @@ section h3{
   padding-bottom:6px;
   border-bottom:1px solid var(--ink);
   font-family:"Libre Baskerville",Georgia,serif;
-  font-size:.9rem;
+  font-size:1rem;
   letter-spacing:.08em;
 }
 .typed{
@@ -147,7 +148,7 @@ section h3{
   padding:7px 8px;
   border:1px solid rgba(23,18,13,.28);
   line-height:24px;
-  font-size:.9rem;
+  font-size:1rem;
   background:
     repeating-linear-gradient(to bottom,transparent 0,transparent 23px,rgba(23,18,13,.10) 23px,rgba(23,18,13,.10) 24px),
     rgba(255,255,255,.08);
