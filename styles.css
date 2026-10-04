@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Special+Elite&family=Libre+Baskerville:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Special+Elite&display=swap');
 
 :root{
   --paper:#efe3cf;
@@ -13,7 +13,7 @@
 *{box-sizing:border-box}
 html,body{margin:0;min-height:100%}
 body{
-  font-family:"Special Elite","Courier New",monospace;
+  font-family:"Courier Prime","Courier New",monospace;
   color:var(--ink);
   background:
     radial-gradient(circle at 15% 10%,rgba(255,255,255,.06),transparent 24%),
@@ -33,7 +33,7 @@ button,select{font:inherit}
   border:1px solid #6f5947;
   box-shadow:0 8px 24px #0007;
 }
-.toolbar h1{font-family:"Libre Baskerville",Georgia,serif;font-size:1rem;letter-spacing:.08em;margin:0 0 5px}
+.toolbar h1{font-family:"Courier Prime","Courier New",monospace;font-size:1rem;letter-spacing:.08em;margin:0 0 5px}
 .toolbar small{opacity:.72}
 .controls{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
 .print-hint{font-size:.66rem;opacity:.78;max-width:230px;line-height:1.25}
@@ -70,7 +70,7 @@ button,select{font:inherit}
 }
 .agency,.division{text-align:center}
 .agency{
-  font-family:"Libre Baskerville",Georgia,serif;
+  font-family:"Courier Prime","Courier New",monospace;
   font-size:1rem;
   font-weight:700;
   letter-spacing:.12em;
@@ -92,7 +92,7 @@ button,select{font:inherit}
 }
 .file-head h2{
   text-align:center;
-  font-family:"Special Elite","Courier New",monospace;
+  font-family:"Courier Prime","Courier New",monospace;
   letter-spacing:.12em;
   font-size:1.9rem;
   margin:20px 0 18px;
@@ -112,7 +112,7 @@ button,select{font:inherit}
 .full{grid-column:1/-1}
 label{
   display:block;
-  font-family:"Special Elite","Courier New",monospace;
+  font-family:"Courier Prime","Courier New",monospace;
   font-size:1rem;
   font-weight:700;
   letter-spacing:.04em;
@@ -129,7 +129,7 @@ label{
   font-size:1.05rem;
 }
 .subject{
-  font-family:"Special Elite","Courier New",monospace;
+  font-family:"Courier Prime","Courier New",monospace;
   font-size:1.18rem!important;
   font-weight:700!important;
 }
@@ -138,7 +138,7 @@ section h3{
   margin:0 0 10px;
   padding-bottom:6px;
   border-bottom:1px solid var(--ink);
-  font-family:"Special Elite","Courier New",monospace;
+  font-family:"Courier Prime","Courier New",monospace;
   font-size:1.05rem;
   letter-spacing:.06em;
 }
@@ -350,7 +350,7 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
 
   label {
     margin-top: 5px;
-    font-family: "Special Elite", "Courier New", monospace;
+    font-family: "Courier Prime","Courier New",monospace;
     font-size: 10.5pt;
     line-height: 1.15;
     letter-spacing: .045em;
@@ -487,4 +487,45 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
     orphans: 2;
     widows: 2;
   }
+}
+
+/* Stronger classic typewriter treatment */
+.case-file,
+.case-file label,
+.case-file .editable,
+.case-file h2,
+.case-file h3,
+.case-file .agency,
+.case-file .division,
+.case-file .record-number,
+.case-file footer p {
+  font-family:"Courier Prime","Courier New",monospace;
+}
+
+.case-file label,
+.case-file h3,
+.case-file .agency,
+.case-file .record-number {
+  font-weight:700;
+}
+
+.case-file .editable,
+.case-file .typed,
+.case-file .grid span {
+  font-weight:400;
+  letter-spacing:.01em;
+}
+
+.case-file h2 {
+  font-weight:700;
+  letter-spacing:.14em;
+}
+
+.case-file h3 {
+  letter-spacing:.055em;
+}
+
+.case-file .subject {
+  font-family:"Courier Prime","Courier New",monospace !important;
+  font-weight:700 !important;
 }
