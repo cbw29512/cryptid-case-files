@@ -8,7 +8,7 @@
 </head>
 <body>
 <header class="toolbar no-print">
-  <div><h1>CRYPTID CASE FILES</h1><small>1950s investigative file generator</small></div>
+  <div><h1>WANDERED &amp; FOUND — CRYPTID FILES</h1><small>field notes, witness accounts &amp; found evidence</small></div>
   <div class="controls">
     <select id="caseSelect" aria-label="Select cryptid case"></select>
     <button id="saveBtn">Save Draft</button>
@@ -23,7 +23,7 @@
     <div class="agency">UNITED STATES BUREAU OF UNUSUAL INVESTIGATIONS</div>
     <div class="division">SPECIAL FIELD INVESTIGATIONS DIVISION</div>
     <div class="stamp editable" contenteditable="true" data-field="classification"></div>
-    <h2>CASE FILE</h2>
+    <h2>FIELD CASE FILE</h2>
 
     <div class="grid meta">
       <label>CASE NO.<span class="editable" contenteditable="true" data-field="case_id"></span></label>
@@ -36,7 +36,7 @@
   </header>
 
   <section>
-    <h3>PHYSICAL DESCRIPTION</h3>
+    <h3>CREATURE DESCRIPTION</h3>
     <div class="grid">
       <label>HEIGHT<span class="editable" contenteditable="true" data-field="physical_description.height"></span></label>
       <label>WEIGHT<span class="editable" contenteditable="true" data-field="physical_description.weight"></span></label>
@@ -48,7 +48,7 @@
   </section>
 
   <section>
-    <h3>BEHAVIOR &amp; HABITAT</h3>
+    <h3>FIELD OBSERVATIONS</h3>
     <label>OBSERVED BEHAVIOR<div class="typed editable tall" contenteditable="true" data-field="behavior"></div></label>
     <label>HABITAT<div class="typed editable" contenteditable="true" data-field="habitat"></div></label>
     <label>KNOWN RANGE<div class="typed editable" contenteditable="true" data-field="known_range"></div></label>
@@ -60,19 +60,19 @@
   </section>
 
   <section>
-    <div class="section-row"><h3>PHYSICAL EVIDENCE</h3><button id="addEvidenceBtn" class="no-print">+ Add Evidence</button></div>
+    <div class="section-row"><h3>FOUND EVIDENCE</h3><button id="addEvidenceBtn" class="no-print">+ Add Evidence</button></div>
     <div id="evidenceList"></div>
   </section>
 
   <section>
-    <h3>INVESTIGATOR NOTES</h3>
+    <h3>FIELD NOTES</h3>
     <div class="typed editable notes" contenteditable="true" data-field="investigator_notes"></div>
   </section>
 
   <section>
-    <h3>ASSESSMENT</h3>
-    <label>THREAT LEVEL<span class="threat editable" contenteditable="true" data-field="danger_level"></span></label>
-    <label>CASE ASSESSMENT<div class="typed editable tall" contenteditable="true" data-field="assessment"></div></label>
+    <h3>WORKING THEORY</h3>
+    <label>CAUTION LEVEL<span class="threat editable" contenteditable="true" data-field="danger_level"></span></label>
+    <label>WORKING ASSESSMENT<div class="typed editable tall" contenteditable="true" data-field="assessment"></div></label>
     <label>RECOMMENDATIONS<div class="typed editable tall" contenteditable="true" data-field="recommendations"></div></label>
   </section>
 
