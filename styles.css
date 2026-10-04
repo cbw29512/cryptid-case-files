@@ -112,9 +112,10 @@ button,select{font:inherit}
 .full{grid-column:1/-1}
 label{
   display:block;
-  font-size:.68rem;
-  font-weight:bold;
-  letter-spacing:.07em;
+  font-family:"Libre Baskerville",Georgia,serif;
+  font-size:.82rem;
+  font-weight:700;
+  letter-spacing:.055em;
   margin-top:10px;
 }
 .editable{font-weight:normal;text-transform:none;letter-spacing:normal}
@@ -124,7 +125,7 @@ label{
   margin-top:4px;
   padding:4px 2px 2px;
   border-bottom:1px solid var(--line);
-  font-size:.94rem;
+  font-size:1rem;
 }
 .subject{
   font-family:"Libre Baskerville",Georgia,serif;
@@ -348,9 +349,10 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
 
   label {
     margin-top: 5px;
-    font-size: 9.5pt;
+    font-family: "Libre Baskerville", Georgia, serif;
+    font-size: 10.5pt;
     line-height: 1.15;
-    letter-spacing: .055em;
+    letter-spacing: .045em;
     font-weight: 700;
   }
 
