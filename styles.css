@@ -387,3 +387,216 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
     widows:2;
   }
 }
+
+
+/* Print dossier refinement: favor a composed field packet over a web form. */
+@media print {
+  @page {
+    size: Letter;
+    margin: .34in .42in .38in;
+  }
+
+  html,
+  body {
+    width: auto;
+    min-height: 0;
+    background: var(--paper);
+  }
+
+  body {
+    font-size: 9.5pt;
+    line-height: 1.28;
+  }
+
+  .workspace {
+    width: auto;
+    padding: 0;
+    overflow: visible;
+  }
+
+  .case-file {
+    width: auto;
+    min-height: 0;
+    padding: 0;
+    margin: 0;
+    background: transparent;
+    box-shadow: none;
+  }
+
+  .case-file:before {
+    display: none;
+  }
+
+  .print-archive-mark {
+    position: fixed;
+    top: .08in;
+    right: .08in;
+    font-size: 6.3pt;
+    letter-spacing: .12em;
+  }
+
+  .file-head {
+    padding: 0 0 .08in;
+    margin: 0 0 .08in;
+  }
+
+  .agency {
+    font-size: 11.5pt;
+  }
+
+  .division {
+    font-size: 6.7pt;
+    margin-top: 2px;
+  }
+
+  .hand-note {
+    margin-top: 5px;
+    font-size: 7pt;
+  }
+
+  .file-head .stamp {
+    margin-top: 7px;
+    font-size: 7.5pt;
+    padding: 2px 7px 1px;
+  }
+
+  .file-head h2 {
+    margin: 8px 0 8px;
+    font-size: 17pt;
+  }
+
+  .meta {
+    gap: 4px 14px;
+  }
+
+  label {
+    margin-top: 4px;
+    font-size: 6.4pt;
+  }
+
+  .grid span {
+    min-height: 15px;
+    margin-top: 1px;
+    padding: 1px 1px 1px;
+    font-size: 8.2pt;
+  }
+
+  .subject {
+    font-size: 10pt !important;
+  }
+
+  section {
+    margin-top: 11px;
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  section h3 {
+    margin: 0 0 4px;
+    padding-bottom: 3px;
+    font-size: 8.2pt;
+    letter-spacing: .07em;
+    border-bottom-width: 1px;
+    break-after: avoid-page;
+    page-break-after: avoid;
+  }
+
+  section > .grid,
+  section > label,
+  .section-row {
+    break-inside: auto;
+    page-break-inside: auto;
+  }
+
+  /* Narrative material should read like typed notes, not form boxes. */
+  section > label > .typed,
+  section > .typed {
+    min-height: 0;
+    margin-top: 2px;
+    padding: 2px 0 2px 8px;
+    border: 0;
+    border-left: 1.5px solid rgba(126,18,14,.45);
+    background: none;
+    line-height: 14px;
+    font-size: 8pt;
+  }
+
+  section > label > .typed:empty,
+  section > .typed:empty {
+    min-height: 18px;
+  }
+
+  .tall {
+    min-height: 30px;
+  }
+
+  .notes {
+    min-height: 48px;
+  }
+
+  /* Witness and evidence cards remain as physical inserts. */
+  .record {
+    margin-top: 7px;
+    padding: 7px 8px 6px;
+    border: 1px solid rgba(23,18,13,.34);
+    background: rgba(255,255,255,.10);
+    break-inside: avoid-page;
+    page-break-inside: avoid;
+  }
+
+  .record:before {
+    top: -6px;
+    font-size: 5.5pt;
+  }
+
+  .record .typed {
+    margin-top: 3px;
+    min-height: 26px;
+    padding: 4px 5px;
+    border: 1px solid rgba(23,18,13,.22);
+    background: rgba(255,255,255,.08);
+    line-height: 14px;
+    font-size: 7.7pt;
+  }
+
+  .record .grid span {
+    min-height: 14px;
+    font-size: 7.8pt;
+  }
+
+  .record-head {
+    margin-bottom: 2px;
+  }
+
+  .record-number {
+    font-size: 6.8pt;
+  }
+
+  .threat {
+    min-width: 92px;
+    margin-left: 7px;
+    padding: 2px 5px 1px;
+    font-size: 7.7pt;
+  }
+
+  footer {
+    margin-top: 12px;
+    padding-top: 7px;
+    border-top: 1px solid rgba(23,18,13,.28);
+  }
+
+  footer .stamp {
+    margin-top: 0;
+    padding: 2px 7px 1px;
+    font-size: 7.2pt;
+  }
+
+  footer p {
+    margin: 4px 0 0;
+    font-size: 5.8pt;
+  }
+
+  .footer-note {
+    font-size: 6.7pt;
+  }
+}
