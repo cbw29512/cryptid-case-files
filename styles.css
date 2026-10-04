@@ -212,6 +212,7 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
 @page {
   size: Letter;
   margin: 0.42in;
+  background: #efe3cf;
 }
 
 @media print {
@@ -220,16 +221,40 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
     margin: 0;
     padding: 0;
     width: auto;
-    min-height: 0;
-    background: #ffffff;
+    min-height: 100%;
+    background: var(--paper) !important;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
   }
 
   body {
+    position: relative;
     font-size: 9pt;
     line-height: 1.3;
     color: var(--ink);
+  }
+
+  /*
+   * Chromium repeats fixed print elements on every physical sheet.
+   * This layer makes the paper tone and archive frame independent
+   * of how much content happens to land on that page.
+   */
+  body::before {
+    content: "";
+    position: fixed;
+    z-index: -1000;
+    top: -0.42in;
+    right: -0.42in;
+    bottom: -0.42in;
+    left: -0.42in;
+    background:
+      radial-gradient(circle at 14% 12%, rgba(109,76,42,.055), transparent 22%),
+      radial-gradient(circle at 82% 72%, rgba(109,76,42,.045), transparent 25%),
+      var(--paper);
+    border: 1px solid rgba(70,50,32,.15);
     -webkit-print-color-adjust: exact;
     print-color-adjust: exact;
+    pointer-events: none;
   }
 
   .no-print {
@@ -246,6 +271,7 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
     margin: 0;
     padding: 0;
     overflow: visible;
+    background: transparent !important;
   }
 
   .case-file {
@@ -254,9 +280,9 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
     min-height: 0;
     margin: 0;
     padding: 0.22in 0.24in 0.26in;
-    background: var(--paper);
+    background: transparent;
     box-shadow: none;
-    border: 1px solid rgba(70,50,32,.18);
+    border: 0;
     overflow: visible;
   }
 
@@ -265,10 +291,10 @@ footer p{font-size:.64rem;margin-top:10px;letter-spacing:.05em}
   }
 
   .print-archive-mark {
-    position: absolute;
-    top: 0.08in;
-    right: 0.12in;
-    z-index: 2;
+    position: fixed;
+    top: -0.27in;
+    right: 0;
+    z-index: 5;
     font-size: 6pt;
     letter-spacing: .11em;
     color: var(--red-dark);
