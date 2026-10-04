@@ -35,7 +35,8 @@ button,select{font:inherit}
 }
 .toolbar h1{font-family:"Libre Baskerville",Georgia,serif;font-size:1rem;letter-spacing:.08em;margin:0 0 5px}
 .toolbar small{opacity:.72}
-.controls{display:flex;gap:7px;flex-wrap:wrap}
+.controls{display:flex;gap:7px;flex-wrap:wrap;align-items:center}
+.print-hint{font-size:.66rem;opacity:.78;max-width:230px;line-height:1.25}
 .controls button,.controls select,.section-row button,.remove{
   border:1px solid #b8a68a;
   background:#eadfc9;
